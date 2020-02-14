@@ -7,9 +7,14 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     
 }
+a{
+    text-decoration:underline;
+    color:#FFFFFF;
+    font-weight: bold;
 
+}
 .container{
-    
+    max-width: 1400px;;
     margin: auto;
     
 }
@@ -24,6 +29,23 @@ header{
 .title{
     font-size: 26px;
 }
+
+.sub-header{
+    background-color: rgb(99, 28, 168);
+    
+}
+
+.categorias li{
+    display: inline;
+    margin: 60px;
+    padding: 5px;
+    color: white;
+    text-decoration:underline;
+    font-weight: bold;
+    text-align: center;
+    
+}
+
 
 section{
     padding: 20px;
@@ -46,7 +68,7 @@ section{
 }
 
 footer{
-    width: 98vw; 
+    width: 72vw; 
     height: 10vh;
     background-color: skyblue;
     padding: 5px;
