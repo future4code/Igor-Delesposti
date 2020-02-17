@@ -37,14 +37,22 @@ div>p:first-child {
 div img {
     background: black;
 }
+a:link{
+    text-decoration:none;
+}
 
 .botao-amarelo {
+    margin: 0 auto;
+    display: block;
     background-color: #ffaf43;
     width: 250px;
     height: 40px;
     border-radius: 5px;
     font-size: 20px;
     color: white;
+   
+    
+    
 }
 
 .botao-amarelo:hover {
@@ -54,7 +62,9 @@ div img {
 .container {
     height: 500px;
     text-align: center;
+    
 }
+
 
 .icone {
     height: 15px;
@@ -77,7 +87,10 @@ div img {
 }
 
 #container-para-comprar {
+    border: solid 1px black;
     background-color: #e7eb90;
+    
+    
 }
 
 #container-para-comprar>p {
