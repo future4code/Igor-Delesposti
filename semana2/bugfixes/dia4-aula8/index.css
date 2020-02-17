@@ -34,9 +34,9 @@ div>p:first-child {
     display: inline;
 }
 
-div img {
+/*div img {
     background: black;
-}
+}*/
 a:link{
     text-decoration:none;
 }
@@ -70,6 +70,7 @@ a:link{
 
 .icone {
     height: 15px;
+    width: 15px;
 }
 
 
@@ -123,6 +124,8 @@ div:last-child {
 table {
     width: 60%;
     font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
 }
 
 td button {
@@ -131,6 +134,7 @@ td button {
     height: 30px;
     border-radius: 5px;
     color: black;
+    margin: 0 auto;
 }
 
 td button:hover {
