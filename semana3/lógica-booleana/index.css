@@ -1,0 +1,104 @@
+/*const nome = "Igor"
+console.log("O comprimento do meu nome é: ", nome.length)
+
+const sobrenome = "Delesposti"
+console.log("O comprimento do meu sobrenome é: ", sobrenome.length)
+
+const meuNomeCompleto = nome + " " + sobrenome
+console.log("Meu nome completo é: ", meuNomeCompleto)
+console.log(meuNomeCompleto.length)
+
+
+ primeiroNumero = 21
+
+let segundoNumero = 2
+
+
+const resultado = primeiroNumero  segundoNumero
+console.log("Meu resultado é: ", resultado)
+
+segundoNumero = segundoNumero - primeiroNumero
+
+console.log("Após a operação", segundoNumero)
+
+let resultado = 10
+
+resultado ++ 
+resultado += 100
+
+let idade = Number (prompt("Qual a sua idade?"))
+
+let idadeDoPai = Number (prompt("Qual a idade do seu pai?"))
+
+let diferenca = idadeDoPai - idade
+
+console.log("A diferença de idades é: ", diferenca)
+
+const resultado1 = 3 + 4
+console.log(resultado1)
+
+let resultado2 = 3 * 5
+resultado2 /= 2
+console.log(resultado2)
+
+let resultado3 = 4 - 5
+resultado3 *= -1
+console.log(resultado3)
+
+let resultado4 = 234 % 5
+console.log(resultado4)
+
+//array
+const listaDeNumeros = [2, 9, 34, 121, 560]
+
+console.log(listaDeNumeros.length)
+
+console.log(listaDeNumeros[0])
+
+//pegando sempre o ultimo número do array
+console.log(listaDeNumeros [listaDeNumeros.length -1])
+
+//let listaDeNumeros = [1, 2, 3, 4, 5, 6]
+
+//let numeroDeElementos = listaDeNumeros.length
+console.log(numeroDeElementos)
+
+console.log(listaDeNumeros[0])
+console.log(listaDeNumeros[2])
+console.log(listaDeNumeros[numeroDeElementos - 1]
+
+listaDeNumeros[0] *= 2
+listaDeNumeros[2] *= 2
+listaDeNumeros[4] *= 2
+
+console.log(listaDeNumeros)
+
+
+const bool1 = true
+const bool2 = false
+const bool3 = true
+
+//1
+console.log(bool1 && bool2)
+console.log(bool2 && bool1)
+
+//2
+console.log(bool2 && bool3)
+console.log(bool3 && bool2)
+
+//3
+console.log(bool1 && bool3)
+console.log(bool3 && bool1)
+
+//4
+console.log(bool1 && bool2 && bool3)
+
+// utilizando OU ||
+
+//console.log(bool1 || bool2)
+
+//console.log(bool1 || bool3)
+
+//console.log(bool1 || bool2 || bool3)
+
+console.log(!bool1)*/
