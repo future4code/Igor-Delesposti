@@ -47,43 +47,99 @@ else{
 }*/
 
 
-/*const primeiroNumero = Number(prompt("Digite um numero de 1 a 10"))
-const segundoNumero = Number(prompt("Digite um numero de 1 a 10"))
-const terceiroNumero = Number(prompt("Digite um numero de 1 a 10"))
+// const primeiroNumero = Number(prompt("Digite um numero de 1 a 10"))
+// const segundoNumero = Number(prompt("Digite um numero de 1 a 10"))
+// const terceiroNumero = Number(prompt("Digite um numero de 1 a 10"))
 
 
-if ((primeiroNumero > segundoNumero) && (segundoNumero > terceiroNumero)) {
-    console.log (primeiroNumero)
-    console.log (segundoNumero)
-    console.log (terceiroNumero)
-}else if ((primeiroNumero > terceiroNumero)  && (terceiroNumero > segundoNumero)) {
-    console.log (primeiroNumero)
-    console.log (terceiroNumero)
-    console.log (segundoNumero)
+// if ((primeiroNumero > segundoNumero) && (segundoNumero > terceiroNumero)) {
+//     console.log (primeiroNumero)
+//     console.log (segundoNumero)
+//     console.log (terceiroNumero)
+// }else if ((primeiroNumero > terceiroNumero)  && (terceiroNumero > segundoNumero)) {
+//     console.log (primeiroNumero)
+//     console.log (terceiroNumero)
+//     console.log (segundoNumero)
 
-}else if ((segundoNumero > primeiroNumero)  && (primeiroNumero > terceiroNumero)) {
-    console.log (segundoNumero)
-    console.log (primeiroNumero)
-    console.log (terceiroNumero)
+// }else if ((segundoNumero > primeiroNumero)  && (primeiroNumero > terceiroNumero)) {
+//     console.log (segundoNumero)
+//     console.log (primeiroNumero)
+//     console.log (terceiroNumero)
 
-}else if ((segundoNumero > terceiroNumero)  && (terceiroNumero > primeiroNumero)) {
-    console.log (segundoNumero)
-    console.log (terceiroNumero)
-    console.log (primeiroNumero)
+// }else if ((segundoNumero > terceiroNumero)  && (terceiroNumero > primeiroNumero)) {
+//     console.log (segundoNumero)
+//     console.log (terceiroNumero)
+//     console.log (primeiroNumero)
 
-}else if ((terceiroNumero > primeiroNumero)  && (primeiroNumero > segundoNumero)) {
-    console.log (terceiroNumero)
-    console.log (primeiroNumero)
-    console.log (segundoNumero)
+// }else if ((terceiroNumero > primeiroNumero)  && (primeiroNumero > segundoNumero)) {
+//     console.log (terceiroNumero)
+//     console.log (primeiroNumero)
+//     console.log (segundoNumero)
 
-}else if ((terceiroNumero > segundoNumero)  && (segundoNumero > primeiroNumero)) {
-    console.log (terceiroNumero)
-    console.log (segundoNumero)
-    console.log (primeiroNumero)
+// }else if ((terceiroNumero > segundoNumero)  && (segundoNumero > primeiroNumero)) {
+//     console.log (terceiroNumero)
+//     console.log (segundoNumero)
+//     console.log (primeiroNumero)
 
-}else if ((primeiroNumero === segundoNumero) && (segundoNumero === terceiroNumero)){
-    console.log("Favor não digitar três números iguais")
-}*/
+// }else if ((primeiroNumero === segundoNumero) && (segundoNumero === terceiroNumero)){
+//     console.log("Favor não digitar três números iguais")
+// }
 
 
- 
+
+//5) https://drive.google.com/open?id=1R1pH7exN3t8UVv0UXJ5JvTqybqS6nC2z
+
+
+let vertebras = prompt("tem vertebras ? (s/n)");
+let mamifero;
+let racional;
+let penas;
+let terrestre;
+let agua;
+if (vertebras === "s"){
+    mamifero = prompt("é mamifero? (s/n)");
+
+    if (mamifero ==="s"){
+        racional = prompt("é racional ? (s/n)");
+        if(racional === "s"){
+            console.log("é um humano");
+        }
+        else {
+            console.log("é um mamifero não racional");
+        }
+    }
+
+    else {
+        penas = prompt("tem penas ? (s/n)") 
+        if(penas === "s"){
+            console.log("é uma ave");
+        }
+
+        else {
+        terrestre = prompt("é terrestre ? (s/n)");
+        if(terrestre==="s"){
+
+        agua = prompt("passa parte da vida na água ? (s/n)");
+        if(agua==="s"){
+            console.log("é um anfibio");
+        }
+        else{
+            console.log("é um reptil");
+        }
+    }
+
+    else{
+        console.log("é um peixe");
+        }
+    }
+}
+}
+else{
+    console.log("invertebrado")
+}
+
+
+
+
+    
+
