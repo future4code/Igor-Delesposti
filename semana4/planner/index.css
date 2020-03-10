@@ -1,0 +1,29 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+header{
+    background:linear-gradient(208.07deg,#FF914D,#FF500F);
+    text-align: center;
+    color:white;
+    font-weight: bold;
+    padding: 20px;
+    font-size: 20px;
+}
+
+
+main{
+    display: flex;
+    justify-content: space-evenly;
+    height: 85vh;
+}
+
+ul{
+    border-right: dashed rgb(35,200,204) 1px;
+    padding-right: 90px;
+    color: rgb(99,28,168);
+}
+
+
+
