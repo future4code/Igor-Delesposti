@@ -4,7 +4,21 @@ function publicar(){
     const autor = document.getElementById("autor")
     const areaposts = document.getElementById("posts")
 
-    areaposts.innerHTML += "<div>" + titulo.value + "</div>"
-    areaposts.innerHTML += "<div>" + conteudo.value + "</div>"
-    areaposts.innerHTML += "<div>" + autor.value + "</div>"
+    const objetoPost = new postBlog (titulo.value, conteudo.value, autor.value)
+
+    areaposts.innerHTML += "<div>" + objetoPost.titulo + "</div>"
+    areaposts.innerHTML += "<div>" + objetoPost.conteudo + "</div>"
+    areaposts.innerHTML += "<div>" + objetoPost.autor + "</div>"
 }
+
+
+
+class postBlog{
+    constructor (a,b,c){
+        this.titulo = a
+        this.conteudo = b
+        this.autor = c
+    }
+
+}
+
