@@ -27,11 +27,13 @@ function publicar(){
 
 
 class postBlog{
-    constructor (a,b,c){
-        this.titulo = a
-        this.conteudo = b
-        this.autor = c
+    constructor (titulo, conteudo, autor){
+        this.titulo = titulo
+        this.conteudo = conteudo
+        this.autor = autor
     }
 
 }
+
+
 
