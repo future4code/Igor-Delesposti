@@ -60,12 +60,24 @@
 
 //d.
 
-let arrayOriginal = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
-let index = 0
-const frases = []
-for(let i = 0; i < arrayOriginal.length; i++){
-    index = arrayOriginal[i]
-    frases.push("O elemento do índex "+ i+ "é "+ index)
+// let arrayOriginal = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
+// let index = 0
+// const frases = []
+// for(let i = 0; i < arrayOriginal.length; i++){
+//     index = arrayOriginal[i]
+//     frases.push("O elemento do índex "+ i+ "é "+ index)
     
-}
-console.log(frases) 
+// }
+// console.log(frases) 
+
+//-----------Encontrar os pares entre 0 e um número---------
+// let quantidadePar = (num) => {
+//     let qtdPares = 0;
+//     for(let i = 0; i <= num; i++){
+//         if(i % 2 === 0){
+//             qtdPares +=1
+//           }
+//       }
+//       return qtdPares
+//   }    
+//   console.log(quantidadePar(8));

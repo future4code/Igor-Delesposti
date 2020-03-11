@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap');
+    </style>
+    <script src="index.js" defer></script>
+    <link href="index.css" type="text/css" rel="stylesheet" />
+    <title>Planejamento Semanal</title>
+  </head>
+  <body>
+  
+  <header>  
+    <label for="nova-tarefa">Nova tarefa</label>
+    <input type="text" name="nova-tarefa" id="novaTarefa">
+    <select name="diaDaSemana" id="diaDaSemana">
+      <option value="seg">Segunda</option>
+      <option value="ter">Terça</option>
+      <option value="qua">Quarta</option>
+      <option value="qui">Quinta</option>
+      <option value="sex">Sexta</option>
+      <option value="sab">Sábado</option>
+      <option value="dom">Domingo</option>
+    </select>
+
+    <button onclick="criarTarefa()">Criar Tarefa!</button>  
+    <button onclick="apagaTudo()">Resetar</button>
+  </header>
+  <div class="mainContainer">
+    <main id="planejamento">
+      <ul id="segundafeira">
+        <h3>Segunda-Feira</h3>
+      </ul>
+      <ul id="tercafeira">
+        <h3>Terça-Feira</h3>
+      </ul>
+      <ul id="quartafeira">
+        <h3>Quarta-Feira</h3>
+      </ul>
+      <ul id="quintafeira">
+        <h3>Quinta-Feira</h3>
+      </ul>
+      <ul id="sextafeira">
+        <h3>Sexta-Feira</h3>
+      </ul>
+      <ul id="sabado">
+        <h3>Sábado</h3>
+      </ul>
+      <ul id="domingo">
+        <h3>Domingo</h3>
+      </ul>
+
+    </main>
+  </div>
+ 
+  
+</html>
