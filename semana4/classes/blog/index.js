@@ -6,9 +6,22 @@ function publicar(){
 
     const objetoPost = new postBlog (titulo.value, conteudo.value, autor.value)
 
+    let meuArray = [objetoPost.titulo, objetoPost.conteudo, objetoPost.autor]
+
+
     areaposts.innerHTML += "<div>" + objetoPost.titulo + "</div>"
     areaposts.innerHTML += "<div>" + objetoPost.conteudo + "</div>"
     areaposts.innerHTML += "<div>" + objetoPost.autor + "</div>"
+
+    console.log(meuArray[0])
+    console.log(meuArray[1])
+    console.log(meuArray[2])
+    
+    titulo.value = ""
+    conteudo.value = ""
+    autor.value = ""
+
+    
 }
 
 
