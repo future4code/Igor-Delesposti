@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="index.js"></script>
+    <link href="index.css" type="text/css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Controlador de Despesas</h1>
+    <h2>Cadastrar despesa</h2>
+    <div class="controladorDeDespesas">  
+      <label for="valor">Valor</label>
+      <input type="number" name="valor" id="valorCadastrado"><br>
+      <label for="tipo-Despesa">Tipo (Casa, viagem, rolês ou outros)</label>
+      <select name="tipo-Despesa" id="tipoDespesa">
+        
+        <option value="casa">Casa</option>
+        <option value="viagem">Viagem</option>
+        <option value="roles">Rôles</option>
+        <option value="outros">Outros</option>
+        
+      </select><br>
+      <label for="descricao">Descrição</label>
+      <input type="text" name="descricao" id="descricao"><br>
+      
+      <button onclick="adicionaDespesa()">Cadastrar Despesa</button>  
+      
+    </div>
+
+    <br><br>
+    
+    <div class="despesasDetalhadas">
+      <h1>Despesas Detalhadas</h1>
+      <label for="nova-despesa">Tipo (Casa, viagem, rolês ou outros)</label>
+      <select name="diaDaSemana" id="diaDaSemana">
+        
+        <option value="casa">Casa</option>
+        <option value="viagem">Viagem</option>
+        <option value="roles">Rôles</option>
+        <option value="outros">Outros</option>
+        
+      </select><br>
+      <label for="valorMinimo">Valor Mínimo</label>
+      <input type="number" name="valor-minimo" id="valorMinimo"><br>
+      <label for="valorMaximo">Valor Máximo</label>
+      <input type="number" name="valor-maximo" id="valorMaximo"><br>
+
+      <button onclick="filtrarDespesas()">Filtrar</button>
+      <button onclick="apagarFiltro()">Limpar Filtros</button>
+
+
+    </div>
+    <br><br>
+    
+    <div class="despesasImpressas">
+      <h1> Extrato </h1>
+      <h2> Valor Total: </h2>
+    </div>
+
+  </body>
+</html>
