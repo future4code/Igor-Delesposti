@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="index.js" defer></script>
+    <link href="index.css" type="text/css" rel="stylesheet" />
+    <title>Blog</title>
+  </head>
+  <body>
+    <form>
+
+      <label for="titulo">Título:</label>
+      <input id="titulo"><br>
+
+      <label for="conteudo">Conteúdo:</label>
+      <textarea id="conteudo"></textarea><br>
+      
+      <label for="autor">Autor:</label>
+      <input id="autor"><br>
+
+      <button onclick="publicar()">Postar</button>
+    </form>
+
+    <section id="mainPost">
+      <div id="posts">
+          <h1>Postagens:</h1>
+      </div>
+    </section>  
+
+  </body>
+</html>
