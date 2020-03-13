@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="index.js"></script>
+    <link href="index.css" type="text/css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="seguraTudo">
+      <!--  Cadastrar Despesa -->
+      <section class="section-cadastrarDespesa">
+          <div class="container">
+              <h1>Controlador de Despesas</h1>
+              <h3>Cadastrar despesa</h3>
+              <form action="#">
+                  <label for="valorDespesa">Valor:</label>
+                  <input type="number" id="valorDespesa">
+                  <label for="tipoDespesa">Tipo de despesa:</label>
+                  <select id="tipoDespesa">
+                      <option value="despesaAlimentacao">Alimentação</option>
+                      <option value="despesaCasa">Casa</option>
+                      <option value="despesaViagens">Viagens</option>
+                  </select>
+                  <label for="descricaoDespesa">Descrição:</label>
+                  <input type="text" id="descricaoDespesa">
+                  <button id="btnAddDespesa" onclick="addDespesa()">Adicionar</button>
+              </form>
+          </div>
+      </section>
+      <!--  Despesas Detalhadas -->
+      <section class="section-despesasDetalhadas">
+          <div class="container">
+              <h1>Despesas Detalhadas</h1>
+              <form action="#">
+                  <label for="tipoDespesaFiltrada">Tipo de despesa:</label>
+                  <select id="tipoDespesaFiltrada">
+                      <option value="despesaAlimentacao">Alimentação</option>
+                      <option value="despesaCasa">Casa</option>
+                      <option value="despesaViagens">Viagens</option>
+                  </select>
+                  <label for="valorMinimoDespesa">Valor Mínimo:</label>
+                  <input type="number" id="valorMinimoDespesa">
+                  <label for="valorMaximoDespesa">Valor Máximo:</label>
+                  <input type="number" id="valorMaximoDespesa">
+                  <button id="btnFiltrar" onclick="filtrarDespesas()">Filtrar</button>
+                  <button id="btnLimparFiltros" onclick="limparFiltros()">Limpar filtros</button>
+              </form>
+              <div id="listaFiltrada">
+              </div>
+          </div>
+      </section>
+      <!-- Extrato -->
+      <section id="section-extrato">
+          <div id="container">
+              <h1>Extrato</h1>
+              <div id="conteudoExtrato"></div>
+              <div id="mostrarExtrato"></div>
+          </div>
+      </section>
+  </div>
+
+  </body>
+</html>
