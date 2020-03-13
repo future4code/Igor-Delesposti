@@ -9,56 +9,58 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Controlador de Despesas</h1>
-    <h2>Cadastrar despesa</h2>
-    <div class="controladorDeDespesas">  
-      <label for="valor">Valor</label>
-      <input type="number" name="valor" id="valorCadastrado"><br>
-      <label for="tipo-Despesa">Tipo (Casa, viagem, rolês ou outros)</label>
-      <select name="tipo-Despesa" id="tipoDespesa">
-        
-        <option value="casa">Casa</option>
-        <option value="viagem">Viagem</option>
-        <option value="roles">Rôles</option>
-        <option value="outros">Outros</option>
-        
-      </select><br>
-      <label for="descricao">Descrição</label>
-      <input type="text" name="descricao" id="descricao"><br>
-      
-      <button onclick="adicionaDespesa()">Cadastrar Despesa</button>  
-      
-    </div>
-
-    <br><br>
-    
-    <div class="despesasDetalhadas">
-      <h1>Despesas Detalhadas</h1>
-      <label for="nova-despesa">Tipo (Casa, viagem, rolês ou outros)</label>
-      <select name="diaDaSemana" id="diaDaSemana">
-        
-        <option value="casa">Casa</option>
-        <option value="viagem">Viagem</option>
-        <option value="roles">Rôles</option>
-        <option value="outros">Outros</option>
-        
-      </select><br>
-      <label for="valorMinimo">Valor Mínimo</label>
-      <input type="number" name="valor-minimo" id="valorMinimo"><br>
-      <label for="valorMaximo">Valor Máximo</label>
-      <input type="number" name="valor-maximo" id="valorMaximo"><br>
-
-      <button onclick="filtrarDespesas()">Filtrar</button>
-      <button onclick="apagarFiltro()">Limpar Filtros</button>
-
-
-    </div>
-    <br><br>
-    
-    <div class="despesasImpressas">
-      <h1> Extrato </h1>
-      <h2> Valor Total: </h2>
-    </div>
+    <div class="seguraTudo">
+      <!--  Cadastrar Despesa -->
+      <section class="section-cadastrarDespesa">
+          <div class="container">
+              <h1>Controlador de Despesas</h1>
+              <h3>Cadastrar despesa</h3>
+              <form action="#">
+                  <label for="valorDespesa">Valor:</label>
+                  <input type="number" id="valorDespesa">
+                  <label for="tipoDespesa">Tipo de despesa:</label>
+                  <select id="tipoDespesa">
+                      <option value="despesaAlimentacao">Alimentação</option>
+                      <option value="despesaCasa">Casa</option>
+                      <option value="despesaViagens">Viagens</option>
+                  </select>
+                  <label for="descricaoDespesa">Descrição:</label>
+                  <input type="text" id="descricaoDespesa">
+                  <button id="btnAddDespesa" onclick="addDespesa()">Adicionar</button>
+              </form>
+          </div>
+      </section>
+      <!--  Despesas Detalhadas -->
+      <section class="section-despesasDetalhadas">
+          <div class="container">
+              <h1>Despesas Detalhadas</h1>
+              <form action="#">
+                  <label for="tipoDespesaFiltrada">Tipo de despesa:</label>
+                  <select id="tipoDespesaFiltrada">
+                      <option value="despesaAlimentacao">Alimentação</option>
+                      <option value="despesaCasa">Casa</option>
+                      <option value="despesaViagens">Viagens</option>
+                  </select>
+                  <label for="valorMinimoDespesa">Valor Mínimo:</label>
+                  <input type="number" id="valorMinimoDespesa">
+                  <label for="valorMaximoDespesa">Valor Máximo:</label>
+                  <input type="number" id="valorMaximoDespesa">
+                  <button id="btnFiltrar" onclick="filtrarDespesas()">Filtrar</button>
+                  <button id="btnLimparFiltros" onclick="limparFiltros()">Limpar filtros</button>
+              </form>
+              <div id="listaFiltrada">
+              </div>
+          </div>
+      </section>
+      <!-- Extrato -->
+      <section id="section-extrato">
+          <div id="container">
+              <h1>Extrato</h1>
+              <div id="conteudoExtrato"></div>
+              <div id="mostrarExtrato"></div>
+          </div>
+      </section>
+  </div>
 
   </body>
 </html>
