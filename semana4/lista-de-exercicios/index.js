@@ -62,3 +62,15 @@
 //d) TRUE
 //e) TRUE
 
+//3. 
+
+// function numerosPares(numero){
+//     const quantidadeDeNumerosPares = numero
+//     let i = 0
+    
+//     while(i < quantidadeDeNumerosPares){
+//         console.log( i * 2 )
+//         i++
+//     }
+// }
+// console.log(numerosPares(5))
