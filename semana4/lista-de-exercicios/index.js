@@ -140,3 +140,10 @@
 // soma();
 
 
+//----------------Exercícios de Objetos------------
+
+//1.Um objeto é como se fosse um filme(usando uma analogia). O objeto FILME tem as propriedades ANO/DIRETOR/AUTOR, 
+//uma de suas utilidades é quando queremos utilizar as mesmas propriedades e alterar os valores. 
+// Podemos alimentar um array com as propriedades e depois filtrar os diferentes tipos de valores.
+
+
