@@ -146,4 +146,18 @@
 //uma de suas utilidades é quando queremos utilizar as mesmas propriedades e alterar os valores. 
 // Podemos alimentar um array com as propriedades e depois filtrar os diferentes tipos de valores.
 
+//2.
+// function criaRetangulo(lado1, lado2){
+//     let meuObjeto = {
+//         largura: lado1,
+//         altura: lado2,
+//         perimetro: (2 * (lado1 + lado2)),
+//         area: (lado1 * lado2)
+//     }
+    
+//     return meuObjeto
+// }
+
+// console.log(criaRetangulo(5, 6));
+
 
