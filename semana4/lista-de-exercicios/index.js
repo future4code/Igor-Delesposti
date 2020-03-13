@@ -15,3 +15,7 @@
 
 
 
+//Exercicio 4. É um array que está sendo impresso no console o menor número inteiro dentro do array original e o maior número inteiro
+// utilizando o loop for of com as condições if.
+
+
