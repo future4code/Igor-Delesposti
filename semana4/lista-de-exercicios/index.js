@@ -91,3 +91,28 @@
 // }
 
 // validarLadosTriangulo(4, 4, 4);
+
+//5.
+// function programa (num1, num2){
+//     if(num1 > num2){
+//         console.log("O número 1: ", num1,  " é maior que o número 2: ", num2);
+//     }else{
+//         console.log("O número 2: ", num2, " é maior que o número 1: ", num1);
+//     }
+    
+//     if(num1 % num2 === 0){
+//         console.log("O ", num1, "é divisível por ", num2);
+//     }else{
+//         console.log("O ", num1, "NÃO é divisível por ", num2);
+//     }
+    
+//     if(num1 > num2){
+//         console.log("A diferença entre eles é: ", num1 - num2);
+//     }else{
+//         console.log("A diferença entre eles é: ", num2 - num1);
+//     }
+// }   
+
+
+// programa(15,30)
+
