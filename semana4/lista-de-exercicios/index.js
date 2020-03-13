@@ -161,3 +161,18 @@
 // console.log(criaRetangulo(5, 6));
 
 
+//3.
+// let filmeFavorito = {
+//     titulo: "O Senhor dos Anéis: As Duas Torres",
+//     ano: 2002,
+//     diretor: "Peter Jackson",
+//     ator: ["Elijah Wood", "Orlando Bloom"],
+//     atriz: ["Liv Tyler", "Miranda Otto"],
+//     elenco: ["Viggo Mortensen", "Liv Tyler", "Miranda Otto", "Brad Dourif", "Cate Blanchett", "Andy Serkis"],
+
+// }
+
+// console.log("Venha assistir ao filme ", filmeFavorito.titulo, " de ", filmeFavorito.ano, " dirigido por ",
+//  filmeFavorito.diretor, " e estrelado por ", filmeFavorito.ator[0], " ,", filmeFavorito.atriz[0], " e ", 
+//  filmeFavorito.ator[1], filmeFavorito.elenco); 
+
