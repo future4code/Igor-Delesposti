@@ -42,16 +42,23 @@
 
 // console.log(texto);
 
-const numerosDoArray = [35, 54, 60, 44, 51, 100, 115];
-const array1 = [];
-const array2 = [];
+// const numerosDoArray = [35, 54, 60, 44, 51, 100, 115];
+// const array1 = [];
+// const array2 = [];
 
-for(let numero of numerosDoArray){
-    if(numero % 2 === 0){
-        array1.push(numero);
-    }else {
-        array2.push(numero);
-    }
-}
-console.log("Os números pares são: ", array1);
-console.log("Os números ímpares são: ", array2);
+// for(let numero of numerosDoArray){
+//     if(numero % 2 === 0){
+//         array1.push(numero);
+//     }else {
+//         array2.push(numero);
+//     }
+// }
+// console.log("Os números pares são: ", array1);
+// console.log("Os números ímpares são: ", array2);
+
+//2.a) FALSE
+//b) FALSE
+//c) TRUE
+//d) TRUE
+//e) TRUE
+
