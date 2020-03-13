@@ -92,7 +92,7 @@
 
 // validarLadosTriangulo(4, 4, 4);
 
-//5.
+// 5.
 // function programa (num1, num2){
 //     if(num1 > num2){
 //         console.log("O número 1: ", num1,  " é maior que o número 2: ", num2);
@@ -115,4 +115,23 @@
 
 
 // programa(15,30)
+
+//----------------Exercícios de Funções---------------
+//1.
+// let meuArrayNumeros = [50, 30, 70, 80, 40, 90, 100];
+//     let segundoMaiorNumero = 0;
+//     let segundoMenorNumero = 0;
+
+// meuArrayNumeros.sort(function(a,b){
+//         return a - b
+//     })
+    
+// segundoMenorNumero = meuArrayNumeros[(meuArrayNumeros.length -2 )];
+// console.log(segundoMenorNumero);
+
+// segundoMaiorNumero = meuArrayNumeros[1]
+// console.log(segundoMaiorNumero);
+ 
+
+
 
