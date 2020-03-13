@@ -176,3 +176,23 @@
 //  filmeFavorito.diretor, " e estrelado por ", filmeFavorito.ator[0], " ,", filmeFavorito.atriz[0], " e ", 
 //  filmeFavorito.ator[1], filmeFavorito.elenco); 
 
+
+//4.
+// function anonimizarPessoa(){
+//     let pessoa = {
+//         nome: "Igor",
+//         idade: 26,
+//         email: "igordelesposti@gmail.com",
+//         endereco: "Rua sei lá",
+//     }
+
+//     let objetoNovo = {
+//         ...pessoa,
+//         nome: "ANÔNIMO"
+        
+//     }
+
+//     return objetoNovo;
+// }
+
+// console.log(anonimizarPessoa());
