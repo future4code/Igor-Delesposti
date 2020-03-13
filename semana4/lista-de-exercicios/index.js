@@ -18,4 +18,40 @@
 //Exercicio 4. É um array que está sendo impresso no console o menor número inteiro dentro do array original e o maior número inteiro
 // utilizando o loop for of com as condições if.
 
+//-----------Exercícios de Lógica de Programação-----------
+//1.
 
+// const novoArray = [1, 2, 3, 4, 5, 6, 7,]
+
+// let array = [];
+
+// for(let i = 0; i < novoArray; i++){
+//     array = i;
+// }
+
+// console.log(novoArray);
+
+
+// const meuArray = ["Volkswagen", "Volvo", "Ford", "Fiat"];
+// let i = 0;
+// let texto = "";
+// while (meuArray[i]){
+//     texto += meuArray[i] + ", ";
+//     i++;
+// }
+
+// console.log(texto);
+
+const numerosDoArray = [35, 54, 60, 44, 51, 100, 115];
+const array1 = [];
+const array2 = [];
+
+for(let numero of numerosDoArray){
+    if(numero % 2 === 0){
+        array1.push(numero);
+    }else {
+        array2.push(numero);
+    }
+}
+console.log("Os números pares são: ", array1);
+console.log("Os números ímpares são: ", array2);
