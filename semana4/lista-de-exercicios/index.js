@@ -63,14 +63,17 @@
 //e) TRUE
 
 //3. 
-
-// function numerosPares(numero){
-//     const quantidadeDeNumerosPares = numero
-//     let i = 0
+//Ele não funciona pois foi colocado uma condição de (i <= quantidadeDeNumerosPares) sem alterar o valor de i, isso causa um
+// loop infinito. Dentro do while era necessário adicionar e incrementar utilizando o i++ para se evitar o loop infinito.
+// Segundo a condição deve ser apenas menor (<)  pois já está começando do número zero que é par.
+function numerosPares(numero){
+    const quantidadeDeNumerosPares = numero
+    let i = 0
     
-//     while(i < quantidadeDeNumerosPares){
-//         console.log( i * 2 )
-//         i++
-//     }
-// }
-// console.log(numerosPares(5))
+    while(i < quantidadeDeNumerosPares){
+        console.log( i * 2 )
+        i++  
+    }
+}
+console.log(numerosPares(5))
+
