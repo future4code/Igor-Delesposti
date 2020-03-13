@@ -9,3 +9,9 @@
 //for um dos "case", ele alimenta a variável valorAposInvestimento com o segundo parâmetro da função e realiza multiplicação, de acordo com o case selecionado.
 // As variáveis novoMontante e segundoMontante são apenas para exemplo da invocação da função alimentando o case "Ações" e valor 150.
 //No final o código imprime no console o valor das variáveis novoMontante e segundoMontante que foram invocadas com os parâmetros necessários.
+
+//Exercício 3. É um array que verifica no loop for usando a condição que se o número for dívido por 2 e obtiver o resto 0 ele é par,
+// e os que não forem pares serão ímpares, imprimindo no console um array com os números contidos no array original que são pares ou ímpares.
+
+
+
