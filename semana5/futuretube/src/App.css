@@ -1,0 +1,175 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+header{
+  width: 100%;
+  background-color: rgb(239, 132, 58);
+  position: fixed;
+  top: 5px;
+}
+
+h2 {
+  padding: 10px 5px 10px 5px;
+  color: white;
+  text-align: center;
+}
+
+input {
+      height: 20px;
+      width: 350px;
+      border: 2px solid black;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      
+}
+
+.icone {
+  width: 20px;
+  
+}
+
+
+.container-do-search {
+  
+  margin-top: 3vh;
+  height: 30px;
+  text-align: center;
+}
+
+main{
+  height: 81vh;
+  display:grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  margin:3vh auto;
+  width: 120vh;
+  grid-gap: 3vh;
+}
+
+
+
+main>.item{
+
+  margin: 5px;
+  border: 2px solid green;
+  justify-content: center;
+  align-items: center;
+  width: 14vw;
+  height: 20vh;
+}
+
+main>.item>img{
+  width: 14vw;
+  height: 17vh;
+
+}
+
+main>div>a{
+  
+  padding: 5px 100px;
+  text-decoration: none;
+}
+
+footer{
+  width: 100%;
+  background-color: rgb(239, 132, 58);
+  position: fixed;
+  bottom: 5px;
+}
+
+section{
+  text-align: center;
+  padding-top: 150px;
+  
+}
+
+article{
+  display: inline;
+  width: 15%;
+  float: right;
+  margin-right: 6vw;
+  
+  padding-top: 10vh;
+  
+
+}
+
+
+
+.video1{
+  width: 40vw;
+  
+  
+}
+.video2{
+  width: 50vw;
+}
+
+/* --------------------------------- BARRA NAVEGAÇÃO -----------------------------------*/
+
+
+
+#icon{
+  cursor: pointer;
+  padding: 15px;
+  position: absolute;
+  z-index: 1;
+}
+
+.barra{
+  background-color: rgb(129, 81, 218);
+  height: 88.4vh;
+  width: 30vh;
+  position: absolute;
+  transition: all .2s linear;
+  left: -300px;
+}
+
+.link{
+  background-color: rgb(239,132,58);
+  padding: 20px;
+  font-size: 12pt;
+  transition: all .2s linear;
+  color: #f4f4f9;
+  border-bottom: 2px solid white;
+  opacity: 0;
+  margin-top: 200px;
+  
+}
+
+.link:hover{
+  background-color: rgb(21, 86, 129);
+}
+
+#check{
+  display: none;
+}
+
+#check:checked ~ .barra{
+  transform: translateX(300px);
+}
+
+#check:checked ~ .barra nav a .link{
+  opacity: 1;
+  margin-top: 0;
+  transition-delay: .2s;
+}
+nav{
+  width: 100%;
+  position: absolute;
+  top: 60px;
+}
+
+nav a{
+  text-decoration: none;
+}
+
+
+
+
+
+
