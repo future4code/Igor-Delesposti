@@ -2,6 +2,7 @@
     margin: 10px;
     
     
+    
 }
 
 .bigcard-container {
@@ -20,14 +21,16 @@
  .descricao p {
    padding-bottom: 15px;
    text-align: center;
-   
    width: 350px;
    
- }
- .descricao img {
+}
+
+.descricao img {
     border-radius: 50%;
     margin: 0 0 0 15px;
     width: 90px;
     height: 70px;
     float: left;
  }
+
+ 

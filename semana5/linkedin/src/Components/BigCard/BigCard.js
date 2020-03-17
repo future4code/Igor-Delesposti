@@ -11,11 +11,11 @@ function BigCard(props){
             <div className="descricao">
 
 
-            <h3>{props.titulo}</h3>
-            <img src={props.img} alt="fotoIgor"/>
-            <p>{props.texto}</p>
-
-               
+                <h3>{props.titulo}</h3>
+                <img src={props.img} alt="fotoIgor"/>
+                
+                <p>{props.texto}</p>
+                           
             
             </div>
 

@@ -11,7 +11,7 @@ function SmallCard(props){
 
             <div className="container-endereco">
                 <img alt="endereco" src="https://image.flaticon.com/icons/svg/25/25694.svg"/>
-                <p><strong>Endereço:</strong></p>
+                <p><strong>Endereço:</strong> {props.endereco}</p>
             </div>
         </main>
     );
