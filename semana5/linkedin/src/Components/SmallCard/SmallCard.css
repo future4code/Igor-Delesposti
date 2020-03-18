@@ -1,0 +1,29 @@
+#smallcard-container{
+    margin: 0;
+    width: 400px;
+}
+
+.container-email{
+    display: flex;
+    padding: 10px;
+    border: 1px black solid;
+    
+}
+
+
+.container-endereco{
+    display: flex;
+    padding: 10px;
+    border: 1px black solid;
+    
+}
+
+.container-email img{
+    width: 20px;
+    margin-right: 10px;
+}
+
+.container-endereco img{
+    width: 20px;
+    margin-right: 10px;
+}

@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+ }
+ .section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 50px;
+ }
+ h2 {
+    padding-bottom: 10px;
+ }
