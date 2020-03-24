@@ -37,25 +37,18 @@ class App extends React.Component {
     if (dadosInput !== null) {
       const dadosObjeto = JSON.parse(dadosInput);
 
-      this.setState({
-        id: dadosObjeto.id,
-        texto: dadosObjeto.texto,
-        completa: dadosObjeto.completa
-      })
+      this.setState({tarefas: dadosObjeto})
+      
     }
   };
 
   componentDidUpdate() {
     console.log("Did update");
 
-    const objetoASerSalvo = {
-      id: this.state.id,
-      texto: this.state.texto,
-      completa: this.state.completa
-    }
-    const objetoString = JSON.stringify(objetoASerSalvo);
-
-    localStorage.setItem("camposInput", objetoString)
+    const objetoASerSalvo = JSON.stringify(this.state.tarefas)
+    
+    localStorage.setItem("camposInput", objetoASerSalvo)
+    
   };
 
   onChangeInput = (event) => {
