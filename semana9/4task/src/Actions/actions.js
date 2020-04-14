@@ -1,23 +1,25 @@
-export default function addTodo (text){
+export  function addTodo (text, id){
     return{
         type: 'ADD_TODO',
         payload: {
             text: text,
+            id: new Date().getTime(),
+            completo: false,
             
         },
     }
 }
 
-export default function deleteTodo (id){
+export  function deleteTodo (id){
     return{
-        type: 'DELETAR_TASK',
+        type: 'DELETE_TASK',
         payload: {
-            id: id,
+            id: id
         }
     }
 }
 
-export default function editTodo (id, text){
+export  function editTodo (id, text){
     return{
         type: 'EDIT_TODO',
         payload:{
@@ -27,30 +29,30 @@ export default function editTodo (id, text){
     }
 }
 
-export default function completeTodo (id){
+export  function completeTodo (id){
     return{
-        type: 'COMPLETE_ALL_TODOS',
+        type: 'COMPLETE_TODO',
         payload: {
             id: id,
         }
     }
 }
 
-export default function completeAllTodos (){
+export  function completeAllTodos (){
     return{
         type: 'COMPLETE_ALL_TODOS',
         
     }
 }
 
-export default function clearCompleted (){
+export  function clearCompleted (){
     return{
         type: 'CLEAR_COMPLETED',
         
     }
 }
 
-export default function filter (id){
+export  function filter (id){
     return{
         type: 'FILTER',
         payload: {
