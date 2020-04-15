@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { connect } from 'react-redux';
+import { setFilter } from '../Actions/actions'
 
 const ButtonActions = styled.div`
     
@@ -15,8 +17,9 @@ const ButtonActions = styled.div`
     background-color: white;
     box-sizing: border-box;
 `
-const Link = styled.p`
-font-size: 16px;
+const Link = styled.button`
+font-size: 10px;
+border: none;
 :hover{
     text-decoration: underline;
     cursor: pointer;
@@ -51,11 +54,19 @@ class Footer extends React.Component {
         return (
             <ButtonActions>
                 <Link>Marcar todas como completas</Link>
-                <Buttons>Todas</Buttons>
-                <Buttons>Mostrar Pendentes</Buttons>
-                <Buttons>Mostrar completas</Buttons>
+                <Buttons onClick={()=>this.props.setFilter("none")}>Todas</Buttons>
+                <Buttons onClick={()=>this.props.setFilter("pending")}>Mostrar Pendentes</Buttons>
+                <Buttons onClick={()=>this.props.setFilter("complete")}>Mostrar completas</Buttons>
             </ButtonActions>
         );
     }
 }
-export default Footer;
+
+const mapDispatchToProps = dispatch =>{
+    return{
+        setFilter: filter => dispatch(setFilter(filter))
+    }
+}
+  
+
+export default connect (null, mapDispatchToProps)(Footer);

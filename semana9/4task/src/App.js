@@ -6,6 +6,7 @@ import { addTodo } from "./Actions/actions";
 
 import Paper from '@material-ui/core/Paper'
 
+
 const MainFormContainer = styled(Paper)`
 width: 45.5vw;
 margin: 0 auto; 
@@ -45,13 +46,14 @@ class App extends React.Component {
 
 
   render() {
-    console.log(this.props.taskText)
+    
     return (
       <DivPai>
         <Titulo>4Task</Titulo>
         <MainFormContainer>
           <FormContainer />
         </MainFormContainer>
+        
       </DivPai>
     )
   }

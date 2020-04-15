@@ -1,5 +1,6 @@
 import { combineReducers } from "redux";
 import task from "./task";
+import filter from "./filter"
 
 
 // Local onde juntamos todos os nossos reducers
@@ -7,7 +8,8 @@ import task from "./task";
 // para inicializar a store no createStore();
 
 const rootReducer = combineReducers({
-    task: task
+    task: task,
+    filter: filter
 });
 
 export default rootReducer;

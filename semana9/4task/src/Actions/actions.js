@@ -4,13 +4,13 @@ export  function addTodo (text, id){
         payload: {
             text: text,
             id: new Date().getTime(),
-            completo: false,
+            complete: false,
             
         },
     }
 }
 
-export  function deleteTodo (id){
+export  function deleteTask (id){
     return{
         type: 'DELETE_TASK',
         payload: {
@@ -19,44 +19,37 @@ export  function deleteTodo (id){
     }
 }
 
-export  function editTodo (id, text){
+export  function toggleTodo (id, text){
     return{
-        type: 'EDIT_TODO',
+        type: 'toggle_TODO',
         payload:{
             id: id,
             text: text,
+            
         }
     }
 }
 
-export  function completeTodo (id){
-    return{
-        type: 'COMPLETE_TODO',
-        payload: {
-            id: id,
-        }
-    }
-}
 
-export  function completeAllTodos (){
+export  function completeAllTasks (){
     return{
-        type: 'COMPLETE_ALL_TODOS',
+        type: 'COMPLETE_ALL_TASKS',
         
     }
 }
 
-export  function clearCompleted (){
+export  function deleteAllComplete (){
     return{
-        type: 'CLEAR_COMPLETED',
+        type: 'DELETE_ALL_COMPLETE',
         
     }
 }
 
-export  function filter (id){
+export  function setFilter (filter){
     return{
-        type: 'FILTER',
+        type: 'SET_FILTER',
         payload: {
-            id: id,
+            filter: filter
         }
     }
 }
