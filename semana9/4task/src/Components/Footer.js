@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { setFilter } from '../Actions/actions'
+import { deleteAllTasksComplete } from '../Actions/actions'
 
 const ButtonActions = styled.div`
     
@@ -18,8 +19,9 @@ const ButtonActions = styled.div`
     box-sizing: border-box;
 `
 const Link = styled.button`
-font-size: 10px;
+font-size: 12px;
 border: none;
+background-color: white;
 :hover{
     text-decoration: underline;
     cursor: pointer;
@@ -27,7 +29,8 @@ border: none;
 `
 
 const Buttons = styled.button`
-border: none;
+border: #7d5fff;
+border-radius: 30px;
 padding: 3px 7px;
 background-color: white;
 cursor: pointer;
@@ -35,15 +38,19 @@ cursor: pointer;
 
 :hover{
     
-    border: #f7d794 0.2px solid;
+    border: #7d5fff 2px solid;
     
 }
 :focus{
     
-    border: orange 0.2px solid;
+    border: #7d5fff 2px solid;
     outline: none; 
     
 }
+`
+const Span = styled.span`
+font-weight: bold;
+color:#4b4b4b;
 `
 class Footer extends React.Component {
     constructor(props) {
@@ -53,10 +60,12 @@ class Footer extends React.Component {
     render() {
         return (
             <ButtonActions>
-                <Link>Marcar todas como completas</Link>
-                <Buttons onClick={()=>this.props.setFilter("none")}>Todas</Buttons>
-                <Buttons onClick={()=>this.props.setFilter("pending")}>Mostrar Pendentes</Buttons>
-                <Buttons onClick={()=>this.props.setFilter("complete")}>Mostrar completas</Buttons>
+                {/* <Link><Span>Marcar todas como completas</Span></Link> */}
+                <Buttons onClick={()=>this.props.setFilter("none")}><Span>Todas</Span></Buttons>
+                <Buttons onClick={()=>this.props.setFilter("pending")}><Span>Mostrar Pendentes</Span></Buttons>
+                <Buttons onClick={()=>this.props.setFilter("complete")}><Span>Mostrar completas</Span></Buttons>
+                <Buttons onClick={()=>this.props.deleteAllTasksComplete()}><Span>Deletar tarefas completas</Span></Buttons>
+                
             </ButtonActions>
         );
     }
@@ -64,9 +73,11 @@ class Footer extends React.Component {
 
 const mapDispatchToProps = dispatch =>{
     return{
-        setFilter: filter => dispatch(setFilter(filter))
+        setFilter: filter => dispatch(setFilter(filter)),
+        deleteAllTasksComplete: () => dispatch(deleteAllTasksComplete())
     }
 }
   
+
 
 export default connect (null, mapDispatchToProps)(Footer);

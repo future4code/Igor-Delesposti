@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 import task from "./task";
-import filter from "./filter"
+// import filter from "./filter"
 
 
 // Local onde juntamos todos os nossos reducers
@@ -9,7 +9,7 @@ import filter from "./filter"
 
 const rootReducer = combineReducers({
     task: task,
-    filter: filter
+    
 });
 
 export default rootReducer;

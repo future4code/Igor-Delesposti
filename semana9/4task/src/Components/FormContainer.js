@@ -5,7 +5,8 @@ import TextField from '@material-ui/core/TextField';
 import { addTodo } from "../Actions/actions";
 import { connect } from "react-redux";
 import CloseIcon from '@material-ui/icons/Close';
-import { deleteTask, toggleTodo } from '../Actions/actions';
+import { deleteTask,  fetchTasks, toggleTask, deleteTodo } from '../Actions/actions';
+
 import Checkbox from '@material-ui/core/Checkbox';
 
 const DeleteTask = styled(CloseIcon)`
@@ -16,21 +17,27 @@ const DivTask = styled.div`
 display: flex;
 justify-content: space-between;
 margin: 10px;
+background-color: #f5f6fa;
+
 `
 
 const FormInputBox = styled(TextField)`
 width: 50%;
+
+
 `
 const FormBox = styled.div`
   display: block;
   justify-content: center;
   width:100%;
   box-shadow: 2px 4px 4px 0 rgba(0,0,0,.2), 0 25px 50px 0 rgba(0,0,0,.1);
+  
+  
 `
-// const TaskToggle = styled.p`
-// text-decoration: line-through;
+const TextTask = styled.p`
+color: #596275;
+`
 
-// `
 
 class FormContainer extends React.Component {
     constructor(props) {
@@ -39,18 +46,11 @@ class FormContainer extends React.Component {
             inputTask: ""
         }
     }
-
-    onChangeInput = (event) => {
-
-        this.setState({ inputTask: event.target.value })
-    };
-
-    onKeyDownEnter = (event) => {
-        if (event.key === "Enter") {
-            this.props.addTodo(this.state.inputTask)
-            this.setState({ inputTask: "" })
-        }
+   
+    componentDidMount(){
+        this.props.fetchTasks()
     }
+
     showFilter = ()=>{
         switch(this.props.filter){
             case "none":
@@ -71,28 +71,43 @@ class FormContainer extends React.Component {
                 return     
         }
     }
+
+    onChangeInput = (event) => {
+
+        this.setState({ inputTask: event.target.value })
+    };
+
+    onKeyDownEnter = (event) => {
+        if (event.key === "Enter") {
+            this.props.addTodo(this.state.inputTask)
+            this.setState({ inputTask: "" })
+        }
+    }
+    
+    
     
 
-    renderAllTasks = (agua) => {
-        const allTasks = agua.map((task, index) => {
+    renderAllTasks = (array) => {
+        const allTasks = array.map((task, index) => {
             return (
                 <DivTask key={index}>
                     <Checkbox 
                         
-                        onChange={()=>this.props.toggleTodo(task.id)}
+                        onChange={()=>this.props.toggleTask(task.id)}
                         color="primary"
                     />
-                    <p>{task.text}</p>
-                    <DeleteTask onClick={()=>this.deleteTask(task.id)} />
+                    <TextTask>{task.text}</TextTask>
+                    <DeleteTask onClick={()=>this.props.deleteTodo(task.id)} />
+                    
                 </DivTask>
             )
         })
         return allTasks;
     }
 
-    deleteTask=(id)=>{
-        this.props.deleteTask(id)
-    }
+    // deleteTask=(id)=>{
+    //     this.props.deleteTask(id)
+    // }
 
     render() {
 
@@ -128,7 +143,7 @@ class FormContainer extends React.Component {
 const mapStateToProps = (state) => {
     return {
         taskList: state.task.taskList,
-        filter: state.filter.filter
+        filter: state.task.filter
 
     }
 }
@@ -142,7 +157,10 @@ const mapDispatchToProps = (dispatch) => {
 
         addTodo: text => dispatch(addTodo(text)),
         deleteTask: id => dispatch(deleteTask(id)), 
-        toggleTodo: id => dispatch(toggleTodo(id))
+        fetchTasks: ()=> dispatch(fetchTasks()),
+        toggleTask: id => dispatch(toggleTask(id)),
+        deleteTodo: id => dispatch(deleteTodo(id))
+
     }
 }
 

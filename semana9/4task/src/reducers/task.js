@@ -1,7 +1,8 @@
-import { addTodo } from "../Actions/actions";
+
 
 const initialState = {
-    taskList: []
+    taskList: [],
+    filter: "none"
 };
 
 const task = (state = initialState, action) => {
@@ -25,13 +26,22 @@ const task = (state = initialState, action) => {
                     return task;
                 }
             })
-            
+
             return { ...state, taskList: newState }
 
         }
+        case "SET_TODOS": {
+            return { ...state, taskList: action.payload.todos }
+        }
+        case "SET_FILTER": {
+
+            return { ...state, filter: action.payload.filter }
+        }
+
         default:
             return state;
 
     }
+
 }
 export default task;
