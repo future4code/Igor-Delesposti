@@ -24,13 +24,17 @@ class UserSwipeCard extends Component {
 
     return (
       <UserCardWrapper animation={animation}>
-        <BlurredBackground photo={userToSwipe.photo}/>
-        <ProfilePicture src={userToSwipe.photo}/>
+        <BlurredBackground photo={userToSwipe.photo} />
+        <ProfilePicture src={userToSwipe.photo} />
         <InfoWrapper>
           <TitleWrapper>
             <UserName>{userToSwipe.name},</UserName>
             <UserAge>{userToSwipe.age}</UserAge>
+            
           </TitleWrapper>
+          <div>{userToSwipe.bio}</div>
+          
+
         </InfoWrapper>
       </UserCardWrapper>)
   }

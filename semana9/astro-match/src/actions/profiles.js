@@ -6,6 +6,7 @@ export const setProfile = (profile) => {
 		type: 'SET_PROFILE',
 		payload: {
 			profile: profile,
+			
 		}
 	}
 }
@@ -21,14 +22,12 @@ export const setProfilesMatchs = (profile) => {
 
 
 //ACTION ASYNC
-export const clearSwipes = () => async (dispatch) => {
-	await axios.put('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/igor-hamilton/clear')
-}
+
 
 export const getProfile = () => async (dispatch, getState) => {
 	const response = await axios.get('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/igor-hamilton/person')
 	dispatch(setProfile(response.data.profile))
-	// console.log(response.data.profile)
+	console.log(response.data.profile)
 }
 
 export const chooseProfile = (id, choice) => async (dispatch, getState) => {
@@ -52,3 +51,6 @@ export const getMatches = () => async (dispatch, getState) => {
 	console.log(response.data.matches);
 }
 
+export const clearSwipes = () => async (dispatch) => {
+	await axios.put('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/igor-hamilton/clear')
+}
