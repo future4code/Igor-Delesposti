@@ -89,6 +89,7 @@ class ApplicationForm extends React.Component {
     handleFormSubmit = event => {
         event.preventDefault();
         this.props.applyToTrip(this.state.trip, this.state.form)
+        this.setState({form: ""})
     }
 
     handleInputChange = event => {

@@ -1,5 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import { connect } from "react-redux";
+import { replace } from "connected-react-router";
+import { routes } from "../Router";
+import { createNewTrip } from "../../Actions/tripDetails"
 
 const Titulo = styled.h1`
     color: #686de0;
@@ -57,11 +61,19 @@ class CreateTripPage extends React.Component {
         }
     }
 
+    componentDidMount(){
+        const token = localStorage.getItem("token");
+
+        if (token === null){
+            this.props.goToLoginScreen();
+        }
+    }
     handleFormSubmit = event => {
         event.preventDefault();
-        console.log(this.state.createForm);
+        this.props.createNewTrip(this.state.createForm, localStorage.getItem("token"))
+        console.log(this.state.createForm)
 
-        this.setState({ createForm: {} })
+        this.setState({createForm: ""})
     }
 
     handleInputChange = event => {
@@ -154,6 +166,11 @@ class CreateTripPage extends React.Component {
         )
     }
 }
+const mapDispatchToProps = (dispatch) =>{
+    return{
+        goToLoginScreen: () => dispatch(replace(routes.login)),
+        createNewTrip: (form, token) => dispatch(createNewTrip(form, token))
+    }
+}
 
-
-export default CreateTripPage;
+export default connect(null, mapDispatchToProps)(CreateTripPage);
