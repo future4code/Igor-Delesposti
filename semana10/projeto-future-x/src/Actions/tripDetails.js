@@ -11,6 +11,23 @@ export const setAllTrips = (trips) => {
     }
 }
 
+export const getTripInfo = (trips) => {
+    return{
+        type: 'GET_TRIP_INFO',
+        payload: {
+            trips
+        }
+    }
+}
+
+export const getTripId = (id) => {
+    return {
+        type: 'GET_TRIP_ID',
+        payload: {
+            id,
+        }
+    }
+}
 
 
 //ACTION ASYNC
@@ -43,8 +60,9 @@ export const createNewTrip = (form, token) => async (dispatch, getState) => {
                 },
             }
         )
-        
 
+            alert("Viagem criada com sucesso.")
+            dispatch(push(routes.tripsList))
     } catch (error) {
         alert("Não foi possível criar sua viagem")
         console.error(error);
@@ -68,5 +86,19 @@ export const login = (email, password) => async (dispatch, getState) => {
         alert("Usuário ou senha inválida, tente novamente");
         console.error(error);
     }
+}
+
+export const tripDetails = (id, token) => async (dispatch, getState) => {
+    const response = await axios.get(`https://us-central1-missao-newton.cloudfunctions.net/futureX/igor/trip/${id}`,
+        {
+            headers: {
+                auth: token
+            }
+        }
+    
+    )
+
+    dispatch(getTripInfo(response.data.trip))
+    console.log(response.data.trip)
 }
 

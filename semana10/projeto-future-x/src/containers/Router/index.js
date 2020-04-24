@@ -8,6 +8,8 @@ import ListTripsPage from "../ListTripsPage";
 import CreateTripPage from "../CreateTripPage";
 import TripDetailsPage from "../TripDetailsPage";
 import ApplicationForm from "../ApplicationForm";
+import AdminScreen from "../AdminScreen";
+import ApproveCandidates from "../ApproveCandidates"
 
 
 
@@ -17,7 +19,9 @@ export const routes = {
   applicationForm: "/application-form",
   tripsCreate: "/trips/create",
   tripsList: "/trips/list",
-  tripsDetails: "/trips/details"
+  tripsDetails: "/trips/details",
+  adminScreen: "/adminscreen",
+  approveCandidates: "/approvecandidates"
   // Outras rotas aqui
 };
 
@@ -31,6 +35,8 @@ function Router(props) {
         <Route exact path={routes.tripsList} component={ListTripsPage} />
         <Route exact path={routes.tripsDetails} component={TripDetailsPage} />
         <Route exact path={routes.applicationForm} component={ApplicationForm}/>
+        <Route exact path={routes.adminScreen} component={AdminScreen}/>
+        <Route exact path={routes.approveCandidates} componente={ApproveCandidates}/>
         
       </Switch>
     </ConnectedRouter>

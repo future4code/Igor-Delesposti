@@ -5,6 +5,10 @@ import { replace } from "connected-react-router";
 import { routes } from "../Router";
 import { createNewTrip } from "../../Actions/tripDetails"
 
+import Button from '@material-ui/core/Button';
+import Input from '@material-ui/core/TextField'
+
+
 const Titulo = styled.h1`
     color: #686de0;
     font-size: 35px;
@@ -12,7 +16,7 @@ const Titulo = styled.h1`
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 6px;
     margin-bottom: 30px;
-    width: 73%;
+    width: 130px;
     border-bottom: solid 0.5px #ff6f00;
     border-top: solid 0.5px #ff6f00;
 
@@ -53,6 +57,18 @@ margin: auto;
 const Background = styled.div`
 background-color: #f0f1f2;
  `
+const Text = styled(Input)`
+ margin-top: 20px;
+ `
+
+
+const today = new Date()
+const day = today.getDate()
+const month = today.getMonth()
+const year = today.getFullYear()
+
+const minDate = `${year}-0${month}-${day}`
+
 class CreateTripPage extends React.Component {
     constructor(props) {
         super(props);
@@ -61,10 +77,10 @@ class CreateTripPage extends React.Component {
         }
     }
 
-    componentDidMount(){
+    componentDidMount() {
         const token = localStorage.getItem("token");
 
-        if (token === null){
+        if (token === null) {
             this.props.goToLoginScreen();
         }
     }
@@ -73,7 +89,7 @@ class CreateTripPage extends React.Component {
         this.props.createNewTrip(this.state.createForm, localStorage.getItem("token"))
         console.log(this.state.createForm)
 
-        this.setState({createForm: ""})
+        this.setState({ createForm: "" })
     }
 
     handleInputChange = event => {
@@ -90,74 +106,99 @@ class CreateTripPage extends React.Component {
         return (
             <Background>
                 <Container>
-                   <Options> 
-                    <MySpecialForm onSubmit={this.handleFormSubmit}>
-                        <Titulo>FutureX</Titulo>
-                        <label>Nome da viagem:</label>
-                        <input
-                            name="name"
-                            required
-                            type="text"
-                            pattern="[A-Za-z çÇãéá]{5,}"
-                            title="O nome da viagem deve conter no mínimo 5 letras"
-                            onChange={this.handleInputChange}
-                            value={this.state.createForm.name}
-                        />
-                        <label>Planetas:</label>
-                        <select
-                            name="planet"
-                            required
-                            onChange={this.handleInputChange}
-                            value={this.state.createForm.planet}
+                    <Options>
+                        <MySpecialForm onSubmit={this.handleFormSubmit}>
+                            <Titulo>FutureX</Titulo>
+                            <h2>Criar viagem</h2>
+
+                            <Text
+                                inputProps={{
+                                    pattern: "[A-Za-z ãéÁáêõÕÊíÍçÇÚúüÜ]{5,}",
+                                    title: "O nome deve conter no mínimo 5 letras"
+                                }}
+                                variant="outlined"
+                                name="name"
+                                label="Nome da viagem"
+                                required
+                                type="text"
+                                onChange={this.handleInputChange}
+                                value={this.state.createForm.name}
+                            />
 
 
-                        >
-                            <option>Mercúrio</option>
-                            <option>Vênus</option>
-                            <option>Terra</option>
-                            <option>Marte</option>
-                            <option>Júpiter</option>
-                            <option>Saturno</option>
-                            <option>Urano</option>
-                            <option>Netuno</option>
-                        </select>
-
-                        <label>Data:</label>
-                        <input
-                            name="date"
-                            required
-                            type="date"
-                            title="Deve ser uma data no futuro"
-                            onChange={this.handleInputChange}
-                            value={this.state.createForm.date}
-                            min="22-04-2020"
-                            max="22-04-2021"
-                        />
-
-                        <label>Descrição da viagem</label>
-                        <input
-                            name="description"
-                            required
-                            type="text"
-                            pattern="[A-Za-z çÇãéá]{30,}"
-                            title="O nome deve conter no mínimo 30 letras"
-                            onChange={this.handleInputChange}
-                            value={this.state.createForm.description || ""}
-                        />
-
-                        <label>Duração em dias:</label>
-                        <input
-                            name="durationInDays"
-                            required
-                            type="number"
-                            min="50"
-                            onChange={this.handleInputChange}
-                            value={this.state.createForm.durationInDays}
-                        />
 
 
-                        <button type="submit">Criar</button>
-                    </MySpecialForm>
+                            {/* Não consegui limitar datas */}
+                            <Text
+                                inputProps={{
+                                    min: { minDate },
+                                    defaultValue: { minDate },
+                                    title: "Deve ser uma data no futuro"
+                                }}
+                                variant="outlined"
+                                name="date"
+                                required
+                                type="date"
+                                title="Deve ser uma data no futuro"
+                                onChange={this.handleInputChange}
+                                value={this.state.createForm.date}
+
+                            />
+
+                            
+                            <Text
+                                inputProps={{
+                                    pattern: "[A-Za-z ãéÁáêõÕÊíÍçÇÚúüÜ]{30,}",
+                                    title: "O nome deve conter no mínimo 30 letras"
+                                }}
+                                name="description"
+                                required
+                                type="text"
+                                variant="outlined"
+                                label="Descrição da viagem"
+                                onChange={this.handleInputChange}
+                                value={this.state.createForm.description || ""}
+                            />
+
+                            <label>Duração em dias:</label>
+                            <Text
+                                inputProps={{
+                                    min: 50,
+                                    title: "No mínimo 50 letras"
+                                }}
+                                name="durationInDays"
+                                required
+                                type="number"
+                                variant="outlined"
+                                onChange={this.handleInputChange}
+                                value={this.state.createForm.durationInDays}
+                            />
+
+                            <label>Planetas:</label>
+                            <select
+                                name="planet"
+                                required
+                                onChange={this.handleInputChange}
+                                value={this.state.createForm.planet}
+
+
+                            >
+                                <option>Mercúrio</option>
+                                <option>Vênus</option>
+                                <option>Terra</option>
+                                <option>Marte</option>
+                                <option>Júpiter</option>
+                                <option>Saturno</option>
+                                <option>Urano</option>
+                                <option>Netuno</option>
+                            </select>
+                            <Button
+                                variant="contained"
+                                type="submit"
+                                color="primary"
+                            >Criar</Button>
+
+                        </MySpecialForm>
                     </Options>
                 </Container>
             </Background>
@@ -166,8 +207,8 @@ class CreateTripPage extends React.Component {
         )
     }
 }
-const mapDispatchToProps = (dispatch) =>{
-    return{
+const mapDispatchToProps = (dispatch) => {
+    return {
         goToLoginScreen: () => dispatch(replace(routes.login)),
         createNewTrip: (form, token) => dispatch(createNewTrip(form, token))
     }

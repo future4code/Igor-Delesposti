@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import { push } from "connected-react-router";
+import { routes } from "../Router"
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import styled from "styled-components";
@@ -14,6 +15,8 @@ const LoginWrapper = styled.form`
   justify-items: center;
   display: grid;
 `;
+
+
 
 class LoginPage extends Component {
   constructor(props) {
@@ -48,7 +51,7 @@ class LoginPage extends Component {
 
   render() {
     const { email, password } = this.state;
-    const isLogged = localStorage.getItem("token") !== null;
+    const { goToHomeScreen } = this.props;
 
     return (
 
@@ -59,7 +62,7 @@ class LoginPage extends Component {
             name="email"
             type="email"
             label="E-mail"
-            value={this.state.email}
+            value={email}
             required
           />
           <TextField
@@ -67,19 +70,21 @@ class LoginPage extends Component {
             name="password"
             type="password"
             label="Password"
-            value={this.state.password}
+            value={password}
             required
           />
           <Button type="submit">Login</Button>
+          <Button onClick={goToHomeScreen}>Voltar</Button>
         </LoginWrapper>
-          {isLogged && <Button onClick={this.handleLogout}>Logout</Button>}
+         
       </Fragment>
     );
   }
 }
 const mapDispatchToProps = dispatch => {
   return {
-    login: (email, password) => dispatch(login(email, password))
+    login: (email, password) => dispatch(login(email, password)),
+    goToHomeScreen: () => dispatch(push(routes.root))
   }
 }
 
