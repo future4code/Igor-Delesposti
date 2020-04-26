@@ -89,7 +89,7 @@ class ListTripsPage extends React.Component {
 
     handleLogout = () => {
         localStorage.clear();
-        window.location.reload();
+        // window.location.reload();
         this.props.goToLoginScreen();
     }
     render() {
