@@ -90,6 +90,7 @@ class ListTripsPage extends React.Component {
     handleLogout = () => {
         localStorage.clear();
         window.location.reload();
+        this.props.goToLoginScreen();
     }
     render() {
         const isLogged = localStorage.getItem("token") !== null;
