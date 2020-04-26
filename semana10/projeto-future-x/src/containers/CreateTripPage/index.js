@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import { replace } from "connected-react-router";
 import { routes } from "../Router";
 import { createNewTrip } from "../../Actions/tripDetails"
-
 import Button from '@material-ui/core/Button';
 import Input from '@material-ui/core/TextField'
 
@@ -21,6 +20,7 @@ const Titulo = styled.h1`
     border-top: solid 0.5px #ff6f00;
 
 `
+
 
 const Options = styled.div`
 width: 25%;
@@ -43,8 +43,21 @@ const MySpecialForm = styled.form`
   place-content: center;
   justify-items: center;
   display: grid;
+
+select{
+font-size: 13px;
+width: 225px;
+height: 50px;
+border-radius: 5px;
+border: solid 1px #c5c5c5;
+padding: 10px;
+
+}
+
+select>option{
+    font-size: 13px;
+}
   
-   
 `
 const Container = styled.div`
 width: 100%;
@@ -60,7 +73,9 @@ background-color: #f0f1f2;
 const Text = styled(Input)`
  margin-top: 20px;
  `
-
+const H4 = styled.h4`
+color: #576574;
+`
 
 const today = new Date()
 const day = today.getDate()
@@ -109,8 +124,6 @@ class CreateTripPage extends React.Component {
                     <Options>
                         <MySpecialForm onSubmit={this.handleFormSubmit}>
                             <Titulo>FutureX</Titulo>
-                            <h2>Criar viagem</h2>
-
                             <Text
                                 inputProps={{
                                     pattern: "[A-Za-z ãéÁáêõÕÊíÍçÇÚúüÜ]{5,}",
@@ -124,9 +137,6 @@ class CreateTripPage extends React.Component {
                                 onChange={this.handleInputChange}
                                 value={this.state.createForm.name}
                             />
-
-
-
 
                             {/* Não consegui limitar datas */}
                             <Text
@@ -145,11 +155,10 @@ class CreateTripPage extends React.Component {
 
                             />
 
-                            
                             <Text
                                 inputProps={{
-                                    pattern: "[A-Za-z ãéÁáêõÕÊíÍçÇÚúüÜ]{30,}",
-                                    title: "O nome deve conter no mínimo 30 letras"
+                                    pattern: "[A-Za-z ãéÁáêõÕÊíÍçÇÚúüÜ,.!?:]{30,}",
+                                    title: "A descriçã deve conter no mínimo 30 letras"
                                 }}
                                 name="description"
                                 required
@@ -160,7 +169,25 @@ class CreateTripPage extends React.Component {
                                 value={this.state.createForm.description || ""}
                             />
 
-                            <label>Duração em dias:</label>
+                            <select
+                                placeholder="Planetas"
+                                name="planet"
+                                required
+                                onChange={this.handleInputChange}
+                                value={this.state.createForm.planet}
+                            >
+                                <option>Selecione o Planeta</option>
+                                <option>Mercúrio</option>
+                                <option>Vênus</option>
+                                <option>Terra</option>
+                                <option>Marte</option>
+                                <option>Júpiter</option>
+                                <option>Saturno</option>
+                                <option>Urano</option>
+                                <option>Netuno</option>
+                                <option>Plutão</option>
+                            </select>
+                            <H4>Duração em dias:</H4>
                             <Text
                                 inputProps={{
                                     min: 50,
@@ -173,25 +200,7 @@ class CreateTripPage extends React.Component {
                                 onChange={this.handleInputChange}
                                 value={this.state.createForm.durationInDays}
                             />
-
-                            <label>Planetas:</label>
-                            <select
-                                name="planet"
-                                required
-                                onChange={this.handleInputChange}
-                                value={this.state.createForm.planet}
-
-
-                            >
-                                <option>Mercúrio</option>
-                                <option>Vênus</option>
-                                <option>Terra</option>
-                                <option>Marte</option>
-                                <option>Júpiter</option>
-                                <option>Saturno</option>
-                                <option>Urano</option>
-                                <option>Netuno</option>
-                            </select>
+                            
                             <Button
                                 variant="contained"
                                 type="submit"

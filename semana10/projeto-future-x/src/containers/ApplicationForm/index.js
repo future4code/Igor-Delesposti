@@ -4,12 +4,11 @@ import { CountryDropdown } from 'react-country-region-selector';
 import { connect } from 'react-redux';
 import { getTrips } from "../../Actions/tripDetails";
 import { applyToTrip } from "../../Actions/tripDetails"
-
 import Button from '@material-ui/core/Button';
 import Input from '@material-ui/core/TextField';
 
 
-const Titulo = styled.h1`
+const Title = styled.h1`
     color: #686de0;
     font-size: 35px;
     font-weight: 100;
@@ -45,6 +44,14 @@ const MySpecialForm = styled.form`
   justify-items: center;
   display: grid;
   
+select{
+    width: 225px;
+    height: 50px;
+    border-radius: 5px;
+    border: solid 1px #c5c5c5;
+    padding: 10px;
+
+}
   
    
 `
@@ -62,8 +69,6 @@ background-color: #f0f1f2;
 const Text = styled(Input)`
 margin-top: 20px;
 `
-
-
 
 
 
@@ -117,13 +122,13 @@ class ApplicationForm extends React.Component {
     render() {
         return (
             <Background>
-                
+
                 <Container>
-                    
+
                     <Options>
-                        
+
                         <MySpecialForm onSubmit={this.handleFormSubmit}>
-                            <Titulo>FutureX</Titulo>
+                            <Title>FutureX</Title>
                             <h2>Formulário de inscrição</h2>
 
                             <Text
@@ -179,7 +184,7 @@ class ApplicationForm extends React.Component {
                                 value={this.state.form.profession || ""}
                                 variant="outlined"
                             />
-                            
+
                             <CountryDropdown
                                 required
                                 onChange={(val) => this.handleSelectCountry(val)}
@@ -190,7 +195,11 @@ class ApplicationForm extends React.Component {
 
 
                             <label>Selecione qual viagem: </label>
-                            <select onChange={this.handleSelectTrip} >
+                            <select
+                                required
+                                value={this.state.trip}
+                                onChange={this.handleSelectTrip}
+                            >
                                 <option value="nenhum">Nenhum</option>
                                 {this.props.trips && this.props.trips.map(trip => {
                                     return (
@@ -213,8 +222,8 @@ class ApplicationForm extends React.Component {
 
                         </MySpecialForm>
                     </Options>
-                </Container>
-            </Background>
+                </Container >
+            </Background >
 
         )
     }

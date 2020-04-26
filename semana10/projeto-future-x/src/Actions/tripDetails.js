@@ -45,8 +45,9 @@ export const applyToTrip = (id, form) => async (dispatch, getState) => {
     const response = await axios.post(
         `https://us-central1-missao-newton.cloudfunctions.net/futureX/igor/trips/${id}/apply`, form
     )
+    alert("Inscrição realizada com sucesso.")
     dispatch(getTrips())
-    console.log("Processo realizado")
+    
 };
 
 export const createNewTrip = (form, token) => async (dispatch, getState) => {
