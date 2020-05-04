@@ -15,7 +15,7 @@ const Title = styled.h1`
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 6px;
     margin-bottom: 30px;
-    width: 40%;
+    width: 50%;
     border-bottom: solid 0.5px #ff6f00;
     border-top: solid 0.5px #ff6f00;
 
