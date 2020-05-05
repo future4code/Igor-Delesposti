@@ -1,14 +1,17 @@
 import { sorteiaNumero } from "./ex3";
 
-  test("Primeiro teste", () => {
-    //Preparação
-    const resultado = sorteiaNumero(2, 10);
+describe("Sorteia Número", () => {
+  it("O número sorteado deve estar entre n1 e n2", () => {
+    // Preparação
+    const n1 = 1;
+    const n2 = 100;
 
-    //Execução
-    console.log = jest.fn()
-    console.log(resultado)
+    // Execução
+    const resultado = sorteiaNumero(n1, n2);
 
-    //Verificação
-    expect(console.log).toHaveBeenCalledWith(resultado) 
+    // Verificação
+    expect(resultado).toBeGreaterThanOrEqual(n1);
+    expect(resultado).toBeLessThanOrEqual(n2);
   });
+});
 
