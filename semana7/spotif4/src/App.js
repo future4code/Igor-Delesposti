@@ -78,7 +78,7 @@ const ButtonTrocaTela = styled.button`
 :hover::before {
   transform-origin: center left;
   transform: scaleX(1);
-
+}
 `
 
 class App extends React.Component {
