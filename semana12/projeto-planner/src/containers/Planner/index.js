@@ -5,9 +5,9 @@ import { getTasks } from "../../actions/tasks";
 import InputTask from "../InputTask";
 
 const Options = styled.div`
-width: 70%;
-height: 100%;
-padding: 15vw;
+width: 60%;
+height: fit-content;
+padding: 1vw;
 display: flex;
 flex-direction: column;
 justify-content: space-around;
@@ -16,24 +16,25 @@ box-shadow: 0px 10px 50px rgba(0,0,0,0.1);
 background-color: #f5f6fa;
 align-items: center;
 margin: auto;
-
 `
 const Container = styled.div`
 width: 100%;
-height: 100vh;
+height: fit-content;
 display: flex;
 justify-content: center;
-margin-top: 50px;
+padding: 20px;
 
 `
 const Background = styled.div`
 background-color: #636e72;
+
 `
 const TaskCards = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+
 `
 const InfoBox = styled.div`
 width: 300px;
@@ -52,10 +53,12 @@ font-weight: 100;
 font-family: Arial, Helvetica, sans-serif;
 margin-top: 6px;
 margin-bottom: 30px;
-width: 130px;
+width: 125px;
 border-bottom: solid 0.5px #ff6f00;
 border-top: solid 0.5px #ff6f00;
 `
+
+const days = ["Segunda", "terca-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sabado", "domingo"]
 
 
 class Planner extends React.Component {
@@ -73,6 +76,20 @@ class Planner extends React.Component {
 
 
   render() {
+    const{tasks} = this.props
+
+    const newTaskList = {}
+
+    {tasks[0] && tasks.forEach((task)=>{
+      if(newTaskList[task.day]){
+        newTaskList[task.day].push(task)
+      }else{
+        newTaskList[task.day] = [task]
+      }
+    })}
+
+    console.log(tasks[0])
+
     return (
       <Background>
         <Container>
@@ -80,14 +97,15 @@ class Planner extends React.Component {
             <TaskCards>
               <Title>Planner</Title>
               <InputTask/>
-              {this.props.tasks &&
-                this.props.tasks.map((tasks)=>{
-                  return(
-                    <InfoBox>
-                      <b>{tasks.text}</b> <p>{tasks.day}</p>
-                    </InfoBox>
-                  )
-                })}
+                {days.map((day)=>(
+                  <InfoBox>
+                  <b>{day}</b>
+                  {newTaskList[day] &&
+                    newTaskList[day].map((task)=>(
+                      <p>{task.text}</p>
+                    ))}
+                </InfoBox>
+                ))}
             </TaskCards>
           </Options>
         </Container>

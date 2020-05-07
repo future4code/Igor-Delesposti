@@ -6,12 +6,20 @@ import { createTask } from "../../actions/tasks"
 import styled from "styled-components"
 
 const Container = styled.div`
+width: 35vw;
 display: flex;
 align-items: center;
-justify-content: center;
-margin: 5px;
+justify-content: space-evenly;
+margin-bottom: 28px;
+border-top: solid 1px #0fbcf9;
+padding: 8px;
+border-bottom: solid 1px #0fbcf9;
+`
 
-
+const Select = styled.select`
+height: 55px;
+background: transparent;
+border-radius: 4px;
 `
 class InputPlanner extends React.Component {
     constructor(props) {
@@ -31,7 +39,7 @@ class InputPlanner extends React.Component {
         })
     }
     
-    handleCreatePost = (event) => {
+    handleCreateTask = (event) => {
         event.preventDefault()
         console.log(this.state.taskValue)
         this.props.createTask(this.state.taskValue)
@@ -56,13 +64,14 @@ class InputPlanner extends React.Component {
             value={this.state.taskValue.text}
           />
           <br/><br/>
-          <select
+          <Select
             placeholder="Dia da semana"
             name="day"
             onChange={this.handleInputChange}
             value={this.state.taskValue.day}
           >
-            <option>segunda-feira</option>
+            <option>Selecione um dia da semana</option>
+            <option>Segunda</option>
             <option>terca-feira</option>
             <option>quarta-feira</option>
             <option>quinta-feira</option>
@@ -70,12 +79,13 @@ class InputPlanner extends React.Component {
             <option>sabado</option>
             <option>domingo</option>
 
-          </select>
+          </Select>
           <br/><br/>
           <Button 
           variant="contained" 
-          color="primary"
-          onClick={this.handleCreatePost}
+          color="secondary"
+          size="large"
+          onClick={this.handleCreateTask}
           >Cadastrar</Button>
         </Container>
       )
