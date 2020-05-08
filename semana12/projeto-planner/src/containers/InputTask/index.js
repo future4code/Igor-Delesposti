@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { createTask } from "../../actions/tasks"
 import styled from "styled-components"
 
-const Container = styled.div`
+export const Container = styled.div`
 width: 35vw;
 display: flex;
 align-items: center;
@@ -16,7 +16,7 @@ padding: 8px;
 border-bottom: solid 1px #0fbcf9;
 `
 
-const Select = styled.select`
+export const Select = styled.select`
 height: 55px;
 background: transparent;
 border-radius: 4px;

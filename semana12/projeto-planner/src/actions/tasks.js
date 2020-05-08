@@ -6,7 +6,7 @@ export const setAllTasks = (task) => {
     return {
         type: "SET_ALL_TASKS",
         payload: {
-            task
+          task
         }
     }
 }

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testando o styled do Select 1`] = `
+<select
+  className="sc-bwzfXH gFkpqv"
+/>
+`;
+
+exports[`Testando styled do Container 1`] = `
+<div
+  className="sc-bdVaJa ktPOvl"
+/>
+`;

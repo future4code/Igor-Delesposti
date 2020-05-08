@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { getTasks } from "../../actions/tasks";
 import InputTask from "../InputTask";
 
-const Options = styled.div`
+export const Options = styled.div`
 width: 60%;
 height: fit-content;
 padding: 1vw;
@@ -17,7 +17,7 @@ background-color: #f5f6fa;
 align-items: center;
 margin: auto;
 `
-const Container = styled.div`
+export const Container = styled.div`
 width: 100%;
 height: fit-content;
 display: flex;
@@ -25,18 +25,18 @@ justify-content: center;
 padding: 20px;
 
 `
-const Background = styled.div`
+export const Background = styled.div`
 background-color: #636e72;
 
 `
-const TaskCards = styled.div`
+export const TaskCards = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
 
 `
-const InfoBox = styled.div`
+export const InfoBox = styled.div`
 width: 300px;
 border: 1px solid black;
 margin-bottom: 10px;
@@ -46,7 +46,7 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 `
-const Title = styled.h1`
+export const Title = styled.h1`
 color: #686de0;
 font-size: 35px;
 font-weight: 100;
@@ -76,7 +76,7 @@ class Planner extends React.Component {
 
 
   render() {
-    const{tasks} = this.props
+    const{ tasks } = this.props
 
     const newTaskList = {}
 
