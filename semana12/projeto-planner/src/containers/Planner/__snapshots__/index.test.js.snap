@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testando styled do Background 1`] = `
+<div
+  className="sc-ifAKCX jZPgcg"
+/>
+`;
+
+exports[`Testando styled do Container 1`] = `
+<div
+  className="sc-bxivhb kdFdgV"
+/>
+`;
+
+exports[`Testando styled do InfoBox 1`] = `
+<div
+  className="sc-bZQynM fRWGdB"
+/>
+`;
+
+exports[`Testando styled do Options 1`] = `
+<div
+  className="sc-htpNat cIZCyR"
+/>
+`;
+
+exports[`Testando styled do TaskCards 1`] = `
+<div
+  className="sc-EHOje eVWxdQ"
+/>
+`;
+
+exports[`Testando styled do Title 1`] = `
+<h1
+  className="sc-gzVnrw cICcDh"
+/>
+`;
