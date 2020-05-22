@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Igor",
+    "cpf": "111.222.333-45",
+    "dateOfBirth": "01/01/1990",
+    "balance": 100
+  },
+  {
+    "name": "Chaves",
+    "cpf": "123.456.789-53",
+    "dateOfBirth": "22/05/1980",
+    "balance": 0
+  },
+  {
+    "name": "Kiko",
+    "cpf": "124.556.879-56",
+    "dateOfBirth": "02/08/1994",
+    "balance": 0
+  },
+  {
+    "name": "Seu Madruga",
+    "cpf": "134.756.479-26",
+    "dateOfBirth": "15/08/1964",
+    "balance": 0
+  },
+  {
+    "name": "Náiade",
+    "cpf": "120.445.785-86",
+    "dateOfBirth": "29/09/1989",
+    "balance": 0
+  },
+  {
+    "name": "Chiquinha",
+    "cpf": "124.558.695-78",
+    "dateOfBirth": "11/11/1989",
+    "balance": 0
+  },
+  {
+    "name": "SeuBarriga",
+    "cpf": "123.789.456-58",
+    "dateOfBirth": "20/05/2001",
+    "balance": 0
+  }
+]
