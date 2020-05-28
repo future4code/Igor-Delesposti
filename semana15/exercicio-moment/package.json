@@ -1,0 +1,18 @@
+{
+  "name": "exercicio-moment",
+  "version": "1.0.0",
+  "description": "Exercicio da tarde moment.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node build/exercicio.js"
+  },
+  "author": "Igor Delesposti",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^14.0.5",
+    "install": "^0.13.0",
+    "moment": "^2.26.0",
+    "typescript": "^3.9.3"
+  }
+}

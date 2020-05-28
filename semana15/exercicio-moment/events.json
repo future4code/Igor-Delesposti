@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Estudar React/Redux",
+    "description": "Estudar melhor como pegar id da API",
+    "startDate": "31/05/2020, 10:00",
+    "endDate": "31/05/2020, 17:00"
+  },
+  {
+    "name": "Estudar JavaScript",
+    "description": "Estudar algoritmos",
+    "startDate": "06/06/2020, 10:00am",
+    "endDate": "07/06/2020, 05:00pm"
+  },
+  {
+    "name": "Futebol",
+    "description": "Pelada com os amigos",
+    "startDate": "30/05/2020, 19:30",
+    "endDate": "30/05/2020, 22:00"
+  },
+  {
+    "name": "Estudar JavaScript(3)",
+    "description": "Estudar algoritmos",
+    "startDate": "05/06/2020, 10:00",
+    "endDate": "07/06/2020, 05:00"
+  },
+  {
+    "name": "Estudar JavaScript(8)",
+    "description": "Estudar algoritmos",
+    "startDate": "28/05/2020, 19:00",
+    "endDate": "28/05/2020, 19:30"
+  }
+]
