@@ -1,0 +1,14 @@
+[
+  {
+    "id": "123456",
+    "name": "Professor Girafales",
+    "email": "girafales_prof@gmail.com",
+    "specialties": ["REACT", "REDUX", "CSS", "HTML"]
+  },
+  {
+    "id": "1234567",
+    "name": "Seu Madruga",
+    "email": "madruguinha@gmail.com",
+    "specialties": ["BACKEND", "TYPESCRIPT", "OOP", "TESTES"]
+  }
+]

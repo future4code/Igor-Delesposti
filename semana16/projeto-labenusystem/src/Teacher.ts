@@ -1,4 +1,5 @@
 import { User } from "./user";
+import { FileManager } from "./FileManager";
 
 export enum TEACHER_SPECIALTY {
   REACT = "REACT",
@@ -12,6 +13,7 @@ export enum TEACHER_SPECIALTY {
 }
 
 export class Teacher implements User {
+
   constructor(
     public id: string,
     public name: string,
