@@ -124,6 +124,7 @@ app.post("/login", async (req: Request, res: Response) => {
 
       const userDb = new UserDatabase();
       const user = await userDb.getUserById(authenticationData.id);
+      
 
       res.status(200).send({
         id: user.id,
