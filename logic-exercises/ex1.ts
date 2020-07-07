@@ -56,3 +56,4 @@ function arrayMinMax(array: number[]) {
 const testeArray2 = [-5,2,3,4,6,10,12,15];
 
 console.log(arrayMinMax(testeArray2));
+
