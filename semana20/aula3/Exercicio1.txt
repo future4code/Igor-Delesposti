@@ -1,0 +1,9 @@
+A)
+
+B) Para analisar a string e construir um valor ou um objeto Javascript descrito pela string.
+
+C) Quando é passado na entrada um hasBody e hasQueries retorna um código 200.
+   O valor do body será uma string do conteúdo de "hasBody e hasQueries".
+
+D) Quando não é passado uma entrada no hasBody ou hasQueries.
+
