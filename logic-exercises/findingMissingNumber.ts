@@ -8,4 +8,6 @@ export const findMissingNumber = (arr: number[]): number => {
   };
 
   console.log(findMissingNumber([1,3,4,5]))
+
+//   teste
   
