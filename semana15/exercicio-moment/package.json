@@ -12,7 +12,7 @@
   "dependencies": {
     "@types/node": "^14.0.5",
     "install": "^0.13.0",
-    "moment": "^2.26.0",
+    "moment": "^2.29.4",
     "typescript": "^3.9.3"
   }
 }
